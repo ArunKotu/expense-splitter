@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: expenses-backend
+    env: docker
+    plan: starter
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
+      - key: PORT
+        value: 8080
+
+  - type: web
+    name: expenses-frontend
+    env: docker
+    plan: starter
+    dockerfilePath: ./frontend/Dockerfile
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: "https://expenses-backend.onrender.com"
