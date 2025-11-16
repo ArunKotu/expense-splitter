@@ -1,0 +1,17 @@
+services:
+  backend:
+    build: ./backend
+    container_name: expenses-backend
+    ports:
+      - "8080:8080"
+    environment:
+      MONGO_URI: ${MONGO_URI}
+      EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+    restart: always
+
+  frontend:
+    build: ./frontend
+    container_name: expenses-frontend
+    ports:
+      - "5173:80"
+    restart: always

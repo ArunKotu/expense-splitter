@@ -1,0 +1,140 @@
+/* MAIN CONTAINER */
+.members-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+  animation: fadeIn 0.7s ease-out;
+}
+
+.members-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #e7e7ff;
+  margin-bottom: 5px;
+}
+
+.members-subtitle {
+  opacity: 0.7;
+  margin-bottom: 35px;
+}
+
+/* ADD MEMBER ROW */
+.member-input-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.member-input {
+  width: 220px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  outline: none;
+  backdrop-filter: blur(12px);
+  transition: 0.2s ease;
+}
+
+.member-input:focus {
+  border-color: #7df0ff;
+  box-shadow: 0 0 12px #7df0ff80;
+}
+
+.add-btn {
+  padding: 14px 25px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5f4bff, #7df0ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px #7df0ff90;
+}
+
+/* MEMBER LIST */
+.members-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.member-card {
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(20px) saturate(160%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e8e8f7;
+}
+
+.member-email {
+  font-size: 14px;
+  color: #b6c5ff;
+  opacity: 0.8;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: #ff4b4b;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.remove-btn:hover {
+  background: #ff2e2e;
+  box-shadow: 0 0 12px #ff4b4b90;
+}
+
+/* NO MEMBERS TEXT */
+.no-members {
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  margin-top: 35px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  background: #444;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.back-btn:hover {
+  background: #555;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}

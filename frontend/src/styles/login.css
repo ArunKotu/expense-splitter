@@ -1,0 +1,94 @@
+/* Login Glass Card */
+.login-card {
+  width: 420px;
+  padding: 40px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 22px;
+  backdrop-filter: blur(22px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 0 40px rgba(0, 0, 0, 0.45),
+    0 4px 20px rgba(255, 255, 255, 0.08) inset;
+
+  animation: fadeIn 0.7s ease-out;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 25px;
+  opacity: 0.75;
+}
+
+/* Labels */
+.label {
+  margin-bottom: 8px;
+  display: block;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* Input */
+.input {
+  width: 100%;
+  padding: 14px;
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 20px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  border: 1.2px solid rgba(255, 255, 255, 0.18);
+
+  transition: 0.25s ease;
+}
+
+.input:focus {
+  border-color: #7a6cff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 18px #7a6cff44;
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #6b5bff, #7df0ff);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px #7df0ff66;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

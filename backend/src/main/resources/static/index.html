@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Expense Splitter - Demo UI</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+    <h1>Expense Splitter — Demo</h1>
+    <div id="status"></div>
+</header>
+
+<main class="container">
+
+    <!-- Auth area -->
+    <section class="card" id="authCard">
+        <h2>Admin (Create / Login)</h2>
+
+        <div class="row">
+            <input id="adminUsername" placeholder="username" />
+            <input id="adminPassword" placeholder="password" type="password" />
+        </div>
+
+        <div class="row">
+            <button id="btnCreateAdmin">Create Admin</button>
+            <button id="btnLogin">Login</button>
+            <button id="btnLogout" style="display:none">Logout</button>
+        </div>
+
+        <div id="authMsg" class="msg"></div>
+    </section>
+
+    <!-- Add member -->
+    <section class="card">
+        <h2>Members</h2>
+        <div class="row">
+            <input id="memberName" placeholder="Member name" />
+            <input id="memberEmail" placeholder="Member email (optional)" />
+            <button id="btnAddMember">Add Member</button>
+        </div>
+        <div class="row">
+            <button id="btnLoadMembers">Load Members</button>
+        </div>
+        <ul id="membersList" class="list"></ul>
+    </section>
+
+    <!-- Add expense -->
+    <section class="card">
+        <h2>Add Expense</h2>
+        <div class="row">
+            <select id="payerSelect"><option value="">-- payer --</option></select>
+            <input id="amount" type="number" placeholder="amount" />
+        </div>
+        <div class="row">
+            <input id="category" placeholder="category" />
+            <input id="reason" placeholder="reason" />
+        </div>
+        <div class="row">
+            <input id="expenseDate" type="date" />
+            <button id="btnAddExpense">Add Expense</button>
+        </div>
+        <div id="addExpenseMsg" class="msg"></div>
+    </section>
+
+    <!-- View / filter / delete expenses -->
+    <section class="card">
+        <h2>View Expenses</h2>
+        <div class="row">
+            <input id="filterDate" type="date" />
+            <button id="btnApplyFilter">Apply Filter (till)</button>
+            <button id="btnLoadAll">Load All</button>
+            <button id="btnSummary">Get Summary (from backend)</button>
+            <button id="btnSendMail">Send Summary Mail</button>
+        </div>
+
+        <table id="expensesTable">
+            <thead>
+            <tr><th>Payer</th><th>Amount</th><th>Category</th><th>Reason</th><th>Date</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <div id="summaryArea" class="summary"></div>
+    </section>
+
+</main>
+
+<footer class="footer">Backend demo UI — change BASE_URL in <code>app.js</code> if needed</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

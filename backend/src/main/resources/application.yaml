@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: ExpenseSplitter
+
+  data:
+    mongodb:
+      uri: "${MONGO_URI}"
+      database: expensesplitter
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    time-zone: Asia/Kolkata
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: arunim2810@gmail.com
+    password: "${EMAIL_PASSWORD}"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+logging:
+  level:
+    org.springframework: INFO
+    com.expensesplitter: DEBUG

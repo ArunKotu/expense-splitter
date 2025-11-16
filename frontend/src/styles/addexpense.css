@@ -1,0 +1,136 @@
+.addexpense-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.addexpense-card {
+  width: 420px;
+  padding: 32px;
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(18px) saturate(150%);
+
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.addexpense-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 6px;
+  color: #e8e8ff;
+  font-weight: 700;
+}
+
+.addexpense-subtitle {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 24px;
+}
+
+.expense-input,
+.expense-select {
+  width: 100%;
+  height: 48px;
+  padding: 12px 15px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(200, 200, 255, 0.3);
+  background: rgba(255, 255, 255, 0.07);
+  color: white;
+
+  outline: none;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.expense-input:focus,
+.expense-select:focus {
+  border-color: #7df0ff;
+  box-shadow: 0 0 12px #7df0ff80;
+}
+
+/* Dropdown options */
+.expense-select option {
+  background: #1f1f1f;
+  color: white;
+}
+
+/* Remove increment buttons */
+.no-spinner::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spinner {
+  -moz-appearance: textfield;
+}
+
+/* Add button */
+.addexpense-btn {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #6f4bff, #7df0ff);
+  color: white;
+
+  transition: 0.25s ease;
+}
+
+.addexpense-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 14px #7df0ff70;
+}
+
+/* Back button */
+.back-btn {
+  width: 100%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+
+  border: 1px solid rgba(200, 200, 255, 0.2);
+  border-radius: 12px;
+
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* Success box */
+.success-box {
+  padding: 16px;
+  margin-bottom: 15px;
+  background: rgba(0, 255, 120, 0.12);
+  border: 1px solid rgba(0, 255, 120, 0.4);
+  border-radius: 10px;
+  color: #9bffc2;
+  font-weight: 600;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
